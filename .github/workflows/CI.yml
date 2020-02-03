@@ -19,6 +19,7 @@ jobs:
       - run: mkdir -p path/to/artifact
       - run: echo hello > path/to/artifact/hello.txt
       - run: echo world > path/to/artifact/world.txt
+      - run: echo nest1 > path/to/artifact/path/to/nest1.txt
       - uses: actions/upload-artifact@v1
         with:
           name: my-artifact
