@@ -21,7 +21,22 @@ jobs:
       - run: echo world > path/to/artifact/world.txt
       - run: mkdir -p path/to/artifact/path/to
       - run: echo nest1 > path/to/artifact/path/to/nest1.txt
+      - run: ./cats.sh 10 path/to/cats10
+      - run: ./cats.sh 50 path/to/cats50
+      - run: ./cats.sh 100 path/to/cats100
       - uses: actions/upload-artifact@v1
         with:
           name: my-artifact
           path: path/to/artifact
+      - uses: actions/upload-artifact@v1
+        with:
+          name: cats10
+          path: path/to/cats10
+      - uses: actions/upload-artifact@v1
+        with:
+          name: cats50
+          path: path/to/cats50
+      - uses: actions/upload-artifact@v1
+        with:
+          name: cats100
+          path: path/to/cats100
